@@ -59,4 +59,5 @@
         android:contentDescription="@string/add_note"
         android:backgroundTint="@color/blue"
         android:src="@drawable/baseline_draw_24" />
+    <!--123-->
 </RelativeLayout>
