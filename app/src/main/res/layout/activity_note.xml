@@ -68,6 +68,8 @@
             android:inputType="text"
             android:textSize="40sp" />
 
+
+
         <EditText
             android:id="@+id/editTextText2"
             android:layout_width="match_parent"
