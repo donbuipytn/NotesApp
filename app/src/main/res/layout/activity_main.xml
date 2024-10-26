@@ -1,76 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/main">
-
+    android:background="@color/color10"
+    tools:context=".MainActivity">
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/navLL"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#D3C7C7"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
 
+        >
         <TextView
-            android:id="@+id/nameApp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="30dp"
-            android:layout_marginTop="12dp"
-            android:fontFamily="sans-serif-black"
             android:text="@string/note_app"
             android:textColor="@color/blue"
+            android:textStyle="italic"
             android:textSize="30sp"
-            android:textStyle="italic" />
+            android:fontFamily="sans-serif-black"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginTop="12dp"/>
 
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/searchViewCard"
+        android:layout_margin="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_below="@+id/navLL">
         <androidx.appcompat.widget.SearchView
             android:id="@+id/searchView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/searchViewCard"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginVertical="20dp"
-            android:background="@color/white"
+            android:layout_height="?attr/actionBarSize"
+            app:queryHint="Search Notes"
             app:iconifiedByDefault="false"
-            app:queryHint="Search Notes" />
+            android:background="@color/white" />
+        </androidx.cardview.widget.CardView>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@+id/searchViewCard"
-            android:layout_marginHorizontal="10dp"
-            android:background="@color/white"
-            app:layout_constraintTop_toTopOf="parent" />
-
-    </LinearLayout>
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/noteRv"
+        android:layout_below="@+id/searchViewCard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="20dp"/>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="24dp"
-        android:backgroundTint="@color/blue"
         android:contentDescription="@string/add_note"
-        android:src="@drawable/baseline_draw_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/linearLayout2" />
+        android:backgroundTint="@color/blue"
+        android:src="@drawable/baseline_draw_24" />
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#96BCBC"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"></FrameLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
