@@ -3,9 +3,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- cc-->
-<Button
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"</Button>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
