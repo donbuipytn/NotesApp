@@ -2,14 +2,21 @@ package com.example.notesapp;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
+import androidx.appcompat.widget.SearchView;
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.navigation.NavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,10 +31,5 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         }); //sửa layout
 
-        FloatingActionButton addNewNote = findViewById(R.id.addBtn); // Sử dụng FloatingActionButton
-        addNewNote.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, noteActivity.class);
-            startActivity(intent);
-        });
     }
 }
