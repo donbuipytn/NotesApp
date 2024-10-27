@@ -7,6 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/main">
 
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -16,15 +17,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.SearchView
-        android:id="@+id/searchView2"
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/edtSearchNote"
         android:layout_width="374dp"
-        android:layout_height="49dp"
+        android:layout_height="50dp"
         android:background="#1A715F5F"
+        android:hint="@string/hint_search"
+        android:paddingLeft="70dp"
         app:layout_constraintBottom_toBottomOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/toolbar"/>
+
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:contentDescription="@string/change_list_view"
+        app:layout_constraintEnd_toEndOf="@+id/edtSearchNote"
+        app:layout_constraintTop_toTopOf="@+id/edtSearchNote"
+        app:srcCompat="@drawable/view" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
@@ -32,6 +45,7 @@
         android:layout_height="1000dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
 
@@ -57,5 +71,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/recyclerView"
         app:layout_constraintStart_toStartOf="@+id/recyclerView" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@null"
+        android:contentDescription="@string/menu_home"
+        app:layout_constraintStart_toStartOf="@+id/edtSearchNote"
+        app:layout_constraintTop_toTopOf="@+id/edtSearchNote"
+        app:srcCompat="@drawable/menu" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,11 @@
 <resources>
     <string name="note_app">Notes App</string>
     <string name="add_note">New Note</string>
+    <string name="menu_home">Menu Home</string>
+    <string name="change_list_view">Change List View</string>
+    <string name="notes">Notes</string>
+    <string name="setting">Cài Đặt</string>
+    <string name="trash">Thùng Rác</string>
+    <string name="help">Giúp đỡ</string>
+    <string name="hint_search">Search your notes</string>
 </resources>

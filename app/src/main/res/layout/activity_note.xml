@@ -68,17 +68,6 @@
             android:inputType="text"
             android:textSize="35sp" />
 
-        <EditText
-            android:id="@+id/editTextText2"
-            android:layout_width="match_parent"
-            android:layout_height="562dp"
-            android:layout_marginHorizontal="20dp"
-            android:background="@null"
-            android:ems="10"
-            android:hint="Note"
-            android:inputType="text"
-            android:textSize="20sp"
-            android:gravity="start"/>
     </LinearLayout>
 
 
